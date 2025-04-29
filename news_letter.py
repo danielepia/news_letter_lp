@@ -27,12 +27,14 @@ Deepening Questions and Answers:
 
 Task:
 Using the initial thoughts and the expanded answers, write a well-structured, engaging newsletter.
+Notice the news letter is about a catholic mom that wants to deepen her faith and share her thoughts with other moms that may be in a similar position.
+
 
 Requirements:
 - Start with a short, engaging introduction that sets the tone.
 - Expand on the initial idea using the answers to the questions.
 - Ensure the newsletter flows logically and maintains a conversational, approachable tone.
-- Conclude with a thoughtful takeaway or call to action for the readers.
+- Conclude with a thoughtful takeaway or call to action for the readers and reference a catholic Saint that relates to what writer is sharing.
 
 Write it in a way that feels personal and insightful, as if the writer is sharing their authentic thoughts with their audience.
 """

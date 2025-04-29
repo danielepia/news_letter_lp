@@ -12,6 +12,8 @@ prompt = PromptTemplate(
     input_variables=["user_input"],
     template="""
 You are an expert content writing coach and editor. Your task is to help refine and deepen a newsletter draft.
+Notice my news letter is about a catholic mom that wants to deepen her faith and share her thoughts with other moms that may be in a similar position.
+
 
 I will provide you with:
 - A description of my idea
