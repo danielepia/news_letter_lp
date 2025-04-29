@@ -7,9 +7,6 @@ import ast
 # Set your OpenAI API Key
 import os
 
-openai_api_key = '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'
-
-
 # Define the template for the chatbot
 prompt = PromptTemplate(
     input_variables=["user_input"],
@@ -42,14 +39,16 @@ Please provide the list of questions now.
 """
 )
 
-# Load the LLM
-llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
-
-# Create the chain
-chatbot = LLMChain(llm=llm, prompt=prompt)
 
 
-def get_questions(user_message):
+
+def get_questions(user_message,openai_api_key=None):
+    # Load the LLM
+    llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
+
+    # Create the chain
+    chatbot = LLMChain(llm=llm, prompt=prompt)
+
     response = chatbot.run(user_input=user_message)
     return ast.literal_eval(response)
 
