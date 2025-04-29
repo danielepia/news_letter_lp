@@ -32,7 +32,7 @@ if st.session_state.step == 'initial':
     if st.button("Submit Initial Thoughts"):
         if initial_input.strip() != "":
             st.session_state.initial_thoughts = initial_input
-            st.session_state.questions = chat.get_questions(initial_input)
+            st.session_state.questions = chat.get_questions(initial_input,api_key)
             st.session_state.current_question = 0
             st.session_state.answers = []
             st.session_state.step = 'questions'
