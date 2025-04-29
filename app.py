@@ -18,6 +18,12 @@ if 'current_question' not in st.session_state:
 # Layout
 st.title("Newsletter Writer Assistant")
 
+api_key = st.text_input(
+    "Enter your LLM API Key (required):",
+    type="password",
+    help="We need your API key to generate personalized questions. It will not be stored."
+)
+
 # Step 1: Collect Initial Thoughts
 if st.session_state.step == 'initial':
     st.subheader("Step 1: Enter your initial ideas")
