@@ -2,10 +2,12 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
+import ast
+
 # Set your OpenAI API Key
 import os
 
-openai_api_key = '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'
+openai_api_key = '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'
 
 
 # Define the template for the chatbot
@@ -49,5 +51,5 @@ chatbot = LLMChain(llm=llm, prompt=prompt)
 
 def get_questions(user_message):
     response = chatbot.run(user_input=user_message)
-    return response
+    return ast.literal_eval(response)
 
