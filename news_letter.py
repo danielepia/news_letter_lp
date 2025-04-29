@@ -39,7 +39,7 @@ Write it in a way that feels personal and insightful, as if the writer is sharin
 )
 
 
-def get_questions(raw_data,openai_api_key=None):
+def generate_news_letter(raw_data,openai_api_key=None):
     formatted_data = {
     "initial_thoughts": raw_data["initial_thoughts"],
     "question1": raw_data["question 1"],
@@ -62,5 +62,5 @@ def get_questions(raw_data,openai_api_key=None):
 
     # Run the chain with formatted inputs
     result = chain.run(formatted_data)
-    return ast.literal_eval(result)
+    return result
 

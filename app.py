@@ -80,7 +80,10 @@ elif st.session_state.step == 'display':
     payload = {"initial_thoughts": st.session_state.initial_thoughts,
            "question 1": st.session_state.questions[0],
            "answer 1": st.session_state.answers[0],
-           "question 2": st.session_state.questions[1]}
+           "question 2": st.session_state.questions[1],
+           "answer 2": st.session_state.answers[1],
+           "question 3": st.session_state.questions[2],
+           "answer 3": st.session_state.answers[2]}
 
     st.session_state.generated_newsletter = news_letter.generate_news_letter(payload,api_key)
 
