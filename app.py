@@ -2,6 +2,7 @@
 
 import streamlit as st
 import chat
+import news_letter
 
 # Initialize session state
 if 'step' not in st.session_state:
@@ -67,9 +68,22 @@ elif st.session_state.step == 'generate':
         st.session_state.step = 'display'
         # No need for st.experimental_rerun()
 
+
+
+
+
 # Step 4: Display Final Draft
 elif st.session_state.step == 'display':
     st.subheader("Your Newsletter Draft")
+    # Formatting
+
+    payload = {"initial_thoughts": st.session_state.initial_thoughts,
+           "question 1": st.session_state.questions[0],
+           "answer 1": st.session_state.answers[0],
+           "question 2": st.session_state.questions[1]}
+
+    st.session_state.generated_newsletter = news_letter.generate_news_letter(payload,api_key)
+
     st.markdown(st.session_state.generated_newsletter)
 
     st.download_button(
