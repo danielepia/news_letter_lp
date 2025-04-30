@@ -62,7 +62,7 @@ def generate_news_letter(raw_data,openai_api_key=None):
     final_prompt = newsletter_prompt.format(**formatted_data)
 
     # Create the chain with the PromptTemplate, not a string
-    chain = LLMChain(llm=llm, prompt=newsletter_prompt)
+    chain = LLMChain(llm=llm, prompt=newsletter_prompt,  max_tokens=1000)
 
     # Run the chain with formatted inputs
     result = chain.run(formatted_data)
