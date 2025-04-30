@@ -84,8 +84,8 @@ elif st.session_state.step == 'display':
            "answer 2": st.session_state.answers[1],
            "question 3": st.session_state.questions[2],
            "answer 3": st.session_state.answers[2]}
-
-    st.session_state.generated_newsletter = news_letter.generate_news_letter(payload,api_key)
+    if st.session_state.generated_newsletter is not None:
+        st.session_state.generated_newsletter = news_letter.generate_news_letter(payload,api_key)
 
     st.write(st.session_state.generated_newsletter)
 
