@@ -87,7 +87,7 @@ elif st.session_state.step == 'display':
 
     st.session_state.generated_newsletter = news_letter.generate_news_letter(payload,api_key)
 
-    st.markdown(st.session_state.generated_newsletter)
+    st.write(st.session_state.generated_newsletter)
 
     st.download_button(
         label="Download Newsletter",

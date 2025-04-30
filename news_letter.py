@@ -34,7 +34,9 @@ Requirements:
 - Start with a short, engaging introduction that sets the tone.
 - Expand on the initial idea using the answers to the questions.
 - Ensure the newsletter flows logically and maintains a conversational, approachable tone.
-- Conclude with a thoughtful takeaway or call to action for the readers and reference a catholic Saint that relates to what writer is sharing.
+- Reference a catholic Saint that relates to what writer is sharing
+- Conclude with a thoughtful takeaway or call to action for the readers.
+- Make sure it is between 300–500 words long.
 
 Write it in a way that feels personal and insightful, as if the writer is sharing their authentic thoughts with their audience.
 """
