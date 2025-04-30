@@ -62,7 +62,7 @@ def generate_news_letter(raw_data,openai_api_key=None):
         model_name="gpt-4o-mini",
         temperature=0.7,
         openai_api_key=openai_api_key,
-        max_tokens=1000
+        max_tokens=700
     )
 
     final_prompt = newsletter_prompt.format(**formatted_data)
