@@ -2,8 +2,6 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
-import ast
-
 # Set your OpenAI API Key
 import os
 
@@ -27,8 +25,10 @@ Deepening Questions and Answers:
 
 Task:
 Using the initial thoughts and the expanded answers, write a well-structured, engaging newsletter.
-Notice the news letter is about a catholic mom that wants to deepen her faith and share her thoughts with other moms that may be in a similar position.
 
+Important:
+- Notice the news letter is about a catholic mom that wants to deepen her faith and share her thoughts with other moms that may be in a similar position.
+- Make sure it is between 300–500 words long.
 
 Requirements:
 - Start with a short, engaging introduction that sets the tone.
@@ -36,7 +36,7 @@ Requirements:
 - Ensure the newsletter flows logically and maintains a conversational, approachable tone.
 - Reference a catholic Saint that relates to what writer is sharing
 - Conclude with a thoughtful takeaway or call to action for the readers.
-- Make sure it is between 300–500 words long.
+
 
 Write it in a way that feels personal and insightful, as if the writer is sharing their authentic thoughts with their audience.
 """
