@@ -1,6 +1,8 @@
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
+from langchain.chat_models import ChatOpenAI
+
 
 import ast
 
@@ -46,7 +48,11 @@ Please provide the list of questions now.
 
 def get_questions(user_message,openai_api_key=None):
     # Load the LLM
-    llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
+    llm = ChatOpenAI(
+        model_name="gpt-4o-mini",
+        temperature=0.7,
+        openai_api_key=openai_api_key
+    )
 
     # Create the chain
     chatbot = LLMChain(llm=llm, prompt=prompt)
