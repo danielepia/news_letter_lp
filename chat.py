@@ -51,7 +51,8 @@ def get_questions(user_message,openai_api_key=None):
     llm = ChatOpenAI(
         model_name="gpt-4o-mini",
         temperature=0.7,
-        openai_api_key=openai_api_key
+        openai_api_key=openai_api_key,
+        max_tokens=1000
     )
 
     # Create the chain

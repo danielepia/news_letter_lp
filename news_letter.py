@@ -1,6 +1,7 @@
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
+from langchain.chat_models import ChatOpenAI
 
 # Set your OpenAI API Key
 import os
@@ -57,12 +58,17 @@ def generate_news_letter(raw_data,openai_api_key=None):
 
 
     # Load the LLM
-    llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
+    llm = ChatOpenAI(
+        model_name="gpt-4o-mini",
+        temperature=0.7,
+        openai_api_key=openai_api_key,
+        max_tokens=1000
+    )
 
     final_prompt = newsletter_prompt.format(**formatted_data)
 
     # Create the chain with the PromptTemplate, not a string
-    chain = LLMChain(llm=llm, prompt=newsletter_prompt,  max_tokens=1000)
+    chain = LLMChain(llm=llm, prompt=newsletter_prompt)
 
     # Run the chain with formatted inputs
     result = chain.run(formatted_data)
