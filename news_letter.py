@@ -29,7 +29,7 @@ Using the initial thoughts and the expanded answers, write a well-structured, en
 
 Important:
 - Notice the news letter is about a catholic mom that wants to deepen her faith and share her thoughts with other moms that may be in a similar position.
-- Make sure it is between 300–500 words long.
+- MAKE SURE IT IS LESS THAN 300 words!
 
 Requirements:
 - Start with a short, engaging introduction that sets the tone.
